@@ -7,8 +7,12 @@ function App() {
   let count4 = 0;
   let selVal = React.createRef();
   let refBlock7 = React.createRef();
+  let out8 = '';
+
+
+
   let [output, setOutput] = useState();
-  let [stateBlock7, setStateBlock7] = useState();
+  let [stateBlock8, setStateBlock8] = useState();
 
   function task1() {
 	console.log('task2')
@@ -24,7 +28,6 @@ function App() {
 	console.log(count4)
   }
   function task5(e) {
-	  console.log(e.target.checked)
 		document.querySelector('.out-5').innerHTML = +e.target.checked;
   }
   function task6() {
@@ -35,10 +38,6 @@ function App() {
 		 g = randomInt(0, 250),
 		 b = randomInt(0, 250);
 
-	//setBlock7
-	console.log(refBlock7.current);
-	let out = document.querySelector('.block-7');
-
 	function randomInt (min, max) {
 		min = Math.ceil(min);
 		max = Math.floor(max);
@@ -46,11 +45,12 @@ function App() {
 	 }
 
 	 refBlock7.current.style.backgroundColor = `rgb(${r},${g},${b})`;
-
   }
   function task8() {
-
+	ДЕЛАЙ ЭТО!!!!
   }
+
+
   function task9() {
 
   }
@@ -102,14 +102,16 @@ function App() {
 
       <section>
         <h2>Task 8</h2>
-        <input type="text" className="task-8"></input>
-        <div className="out-8"></div>
+        <input onKeyPress={task8} type="text" className="task-8"></input>
+        <div className="out-8">{stateBlock8}</div>
       </section>
+
       <section>
         <h2>Task 9</h2>
-        <input type="range" className="task-9"></input>
+        <input type="range" className="task-9" ></input>
         <div className="out-9"></div>
       </section>
+		
       <section>
         <h2>Task 10</h2>
         <input type="number" className="i-10"></input>
